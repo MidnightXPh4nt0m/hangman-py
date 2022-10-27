@@ -62,7 +62,7 @@ class Hangman:
         while wrong_geusses <= err:
             if wrong_geusses == err:
                 print(' :( :( :( You LOSE! ): ): ):')
-                print('The correct word was: ')
+                print(f'The correct word was: {word}')
                 break
             guess = input('Enter your guess: ')
             sep_word = list(word)
