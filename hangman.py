@@ -57,22 +57,29 @@ class Hangman:
         blanks = []
         for i in range(0, len(word)):
             blanks.append('___ ')
-        err = 4
+        err = 8
         wrong_geusses = 0
         while wrong_geusses <= err:
+            if wrong_geusses == err:
+                print(' :( :( :( You LOSE! ): ): ):')
+                print('The correct word was: ')
+                break
             guess = input('Enter your guess: ')
             sep_word = list(word)
-            while guess in sep_word:
-                index = sep_word.index(guess)
-                blanks[index] = guess
-                sep_word[index] = ''
             result = ''
+            if guess in sep_word:
+                while guess in sep_word:
+                    index = sep_word.index(guess)
+                    blanks[index] = guess
+                    sep_word[index] = ''
+            else:
+                wrong_geusses += 1
             for i in blanks:
-                result += f'{i}  '
-            if result.replace(' ', '') == word:
-                print('\n\n ----- Congradulations! ----- \n\n')
-                break
+                    result += f'{i}  '
             print(result)
+            if result.replace(' ', '') == word:
+                    print('\n\n ----- Congradulations! ----- \n\n')
+                    break
             
 
 if __name__ == '__main__':
