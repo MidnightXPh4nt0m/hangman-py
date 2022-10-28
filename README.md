@@ -15,5 +15,8 @@ There is no steps but one. Just run the program.
 ### To-Do
 
 - [x] Ignore just characters in input
+- [x] Setting error limit belong to difficulty
+- [x] Showing the errors remaining
+- [x] Showing guessed letters
 - [ ] Optimize to work with less code
 - [ ] Use tkinter to make GUI
