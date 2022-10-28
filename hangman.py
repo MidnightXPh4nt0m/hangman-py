@@ -65,6 +65,8 @@ class Hangman:
                 print(f'The correct word was: {word}')
                 break
             guess = input('Enter your guess: ')
+            while len(guess) != 1:
+                guess = input('Your guess should be just letters (not a word or a group of letter or numbers or symbols) enter your guess again:')
             sep_word = list(word)
             result = ''
             if guess in sep_word:
