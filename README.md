@@ -8,5 +8,6 @@ There is no requirements for this projects that's all python.
 There is no steps but one. Just run the program.
 
 ### To-Do
+- [ ] Ignore just characters in input
 - [ ] Optimize to work with less code
 - [ ] Use tkinter to make GUI
