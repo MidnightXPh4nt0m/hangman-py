@@ -5,7 +5,7 @@ class Words:
     def __init__(self) -> None:
         self.analyzed_words = {}
         self.words = []
-        self.err = 20
+        self.err = 12
         f = open('words.txt', 'r')
         for i in f.readlines():
             self.words.append(i.replace('\n', ''))
@@ -37,15 +37,15 @@ class Words:
                     choosen_words.append(word['word'])
         elif diff == 'easy':
             for word in words:
-                if word['len'] > 3 and len(word['word']) <= 6:
+                if word['len'] > 5 and len(word['word']) <= 6:
                     choosen_words.append(word['word'])
         elif diff == 'medium':
             for word in words:
-                if word['len'] > 6 and len(word['word']) <= 12:
+                if word['len'] > 8 and len(word['word']) <= 12:
                     choosen_words.append(word['word'])
         elif diff == 'hard':
             for word in words:
-                if  word['len'] > 12:
+                if  word['len'] > 10:
                     choosen_words.append(word['word'])
         else:
             return random.choice(words)['word']
