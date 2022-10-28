@@ -69,13 +69,14 @@ class Hangman:
         err = self.words.get_error_limit()
         wrong_geusses = 0
         guessed_letters = []
+        correct_characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
         while wrong_geusses <= err:
             if wrong_geusses == err:
                 print(' :( :( :( You LOSE! ): ): ):')
                 print(f'The correct word was: {word}')
                 break
             guess = input('Enter your guess: ')
-            while len(guess) != 1:
+            while guess not in correct_characters:
                 guess = input('Your guess should be just letters (not a word or a group of letter or numbers or symbols) enter your guess again:')
             sep_word = list(word)
             result = ''
